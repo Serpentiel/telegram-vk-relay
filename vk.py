@@ -19,7 +19,7 @@ def process_messages_queue():
                 continue
 
             module.api.messages.send(peer_id=2000000000 + config.vk.get('chatId'), random_id=get_random_id(),
-                                     message=message.from_user.first_name + ('' if message.from_user.last_name is None else ' ' + message.from_user.last_name) + ': ' + message.text)
+                                     message=message.from_user.first_name + ('' if message.from_user.last_name is None else ' ' + message.from_user.last_name) + ':\n' + message.text)
             module.messages_queue.pop(i)
             i = i + 1
 

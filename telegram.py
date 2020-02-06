@@ -17,7 +17,7 @@ def process_messages_queue():
                 continue
 
             module.api.send_message(config.telegram.get('chatId'),
-                                    message[1][0]['first_name'] + ' ' + message[1][0]['last_name'] + ': ' + message[0].text)
+                                    message[1][0]['first_name'] + ' ' + message[1][0]['last_name'] + ':\n' + message[0].text)
             module.messages_queue.pop(i)
             i = i + 1
 
