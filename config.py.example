@@ -1,0 +1,14 @@
+import sys
+
+module = sys.modules[__name__]
+
+module.telegram = {
+    'token': 'token',
+    'chatId': -1
+}
+
+module.vk = {
+    'login': '+79999999999',
+    'password': 'password',
+    'chatId': 1
+}
